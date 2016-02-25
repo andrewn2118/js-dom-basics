@@ -63,3 +63,32 @@ for(var i = 0; i < nameSound.length; i++){
   rows[i].firstChild.innerText = animals[i];
   rows[i].firstChild.nextSibling.innerText = sounds[i];
 }
+
+
+
+// ========================================================
+
+
+
+// Matt Solution:
+for (var i = 0; i < animals.length; i++) {
+
+  // 1. create tr 
+  var tr = document.createElement("tr");
+
+  // 2. for each tr, create two tds
+  var td1 = document.createElement("td");
+  var td2 = document.createElement("td");
+
+  // 3. for each td, modify the innerText
+  td1.innerText = animals[i].name;
+  td2.innerText = animals[i].sound;
+  
+  // 4. append the tds to the tr
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+
+  // 5. append the tr to the tbody
+  tbody.appendChild(tr);
+
+}
